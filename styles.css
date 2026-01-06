@@ -1,0 +1,1809 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #5b9bd5;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.hero-text h3 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.hero-text .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.main-quote {
+    font-size: 42px;
+    color: #5b9bd5;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.sub-quote {
+    font-size: 24px;
+    color: #5b9bd5;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.workshop-dates {
+    margin: 50px 0;
+}
+
+.workshop-dates h3 {
+    font-size: 32px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.workshop-subtitle {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.workshop-dates p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Reviews Section */
+.reviews-section {
+    margin: 60px 0;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.review-card {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.review-card.active {
+    display: block;
+}
+
+.review-header {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-stars {
+    color: #f4c542;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    text-align: left;
+}
+
+.reviews-nav {
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reviews-nav:hover {
+    background-color: #4a8bc2;
+}
+
+/* Workshop Info Grid */
+.workshop-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 60px 0;
+    text-align: left;
+}
+
+.workshop-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.workshop-description p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.workshop-intro {
+    font-weight: 600;
+    color: #333;
+}
+
+.workshop-note {
+    font-style: italic;
+    color: #5b9bd5;
+}
+
+/* Workshop Benefits */
+.section-title {
+    font-size: 36px;
+    color: #5b9bd5;
+    margin: 60px 0 40px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.benefit-card {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.benefit-card h3 {
+    font-size: 18px;
+    color: #5b9bd5;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.benefit-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-card li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 0;
+}
+
+/* Benefits List */
+.benefits-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.check-icon {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.benefit-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* About Section */
+.about-section {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+}
+
+.about-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.about-image {
+    flex: 0 0 350px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #5b9bd5;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #f4c542;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.telegram-cta-box h2 {
+    font-size: 42px;
+    color: #5b9bd5;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.telegram-access {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+}
+
+.qui-link {
+    color: #5b9bd5;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.qui-link:hover {
+    text-decoration: underline;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: white;
+    padding: 0px 0px 70px 0px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.testimonial-video {
+    text-align: center;
+}
+
+.testimonial-video iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.testimonial-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Original CTA Detail Section */
+.cta-detail-section {
+    background-color: #f4c542;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-detail-section h2 {
+    font-size: 48px;
+    color: #5b9bd5;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-detail-section h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.cta-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.telegram-info {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.cta-detail-section p {
+    font-size: 16px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.whatsapp-note {
+    font-size: 16px;
+    margin: 25px 0;
+}
+
+.whatsapp-link {
+    color: #5b9bd5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}
+
+.closing {
+    font-size: 18px;
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+.telegram-button {
+    margin-top: 40px;
+}
+
+.btn-telegram {
+    display: inline-block;
+    background-color: #5b9bd5;
+    color: white;
+    padding: 18px 40px;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-telegram:hover {
+    background-color: #4a8bc2;
+}
+
+.access-text {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.highlight {
+    color: #5b9bd5;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #ebebeb;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    color: #5b9bd5;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.whatsapp-title {
+    font-size: 24px;
+    color: #25D366;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #5b9bd5;
+}
+
+.contact-icon svg {
+    width: 48px;
+    height: 48px;
+    stroke: #5b9bd5;
+}
+
+.contact-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-detail {
+    font-size: 16px;
+    color: #555;
+}
+
+.social-section {
+    margin-top: 50px;
+}
+
+.instagram-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.instagram-arrow {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.instagram-link svg {
+    width: 48px;
+    height: 48px;
+    stroke: #333;
+}
+.instagram-link:hover {
+    transform: scale(1.1);
+}
+
+.instagram-icon {
+    font-size: 48px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f4c542;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Mobile menu styles */
+@media (max-width: 970px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding-top: 80px;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 25px;
+        font-size: 18px;
+    }
+    
+/* Hamburger animation */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -5px);
+}
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    
+    
+    .hero-content h1 {
+        font-size: 42px;
+    }
+    
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    
+    .hero-text h3 {
+        font-size: 28px;
+    }
+    
+    .main-quote {
+        font-size: 32px;
+    }
+    
+    .sub-quote {
+        font-size: 18px;
+    }
+    
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .workshop-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .hero-content h2 {
+        font-size: 18px;
+    }
+    
+    .hero-text h3 {
+        font-size: 22px;
+    }
+    
+    .main-quote {
+        font-size: 24px;
+    }
+    
+    .sub-quote {
+        font-size: 16px;
+    }
+    
+    .cta-section h2 {
+        font-size: 32px;
+    }
+    
+    .btn-telegram {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+}
+
+.contact-item:first-child {
+    transform: translateX(-70px);
+}
+
+/* Increase all text sizes */
+body {
+    font-size: 18px;
+}
+
+.nav-menu a {
+    font-size: 16px;
+}
+
+.main-quote {
+    font-size: 48px;
+}
+
+.sub-quote {
+    font-size: 28px;
+}
+
+.workshop-dates h3 {
+    font-size: 36px;
+}
+
+.workshop-subtitle {
+    font-size: 24px;
+}
+
+.workshop-dates p {
+    font-size: 18px;
+}
+
+.workshop-description p {
+    font-size: 18px;
+}
+
+.section-title {
+    font-size: 42px;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+}
+
+.benefit-card li {
+    font-size: 16px;
+}
+
+.benefit-item p {
+    font-size: 18px;
+}
+
+.about-text h2 {
+    font-size: 32px;
+}
+
+.about-text p {
+    font-size: 18px;
+}
+
+.cta-section h2 {
+    font-size: 48px;
+}
+
+.cta-section h3 {
+    font-size: 32px;
+}
+
+.cta-text {
+    font-size: 20px;
+}
+
+.telegram-info {
+    font-size: 18px;
+}
+
+.cta-section p {
+    font-size: 18px;
+}
+
+.btn-telegram {
+    font-size: 28px;
+}
+
+.access-text {
+    font-size: 26px;
+}
+
+.testimonial-name {
+    font-size: 20px;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+}
+
+.whatsapp-title {
+    font-size: 28px;
+}
+
+.contact-label {
+    font-size: 20px;
+}
+
+.contact-detail {
+    font-size: 18px;
+}
+
+.instagram-text {
+    font-size: 20px;
+}
+
+.review-text {
+    font-size: 17px;
+}
+
+/* Yellow Banner */
+.yellow-banner {
+    background-color: #f4c542;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.yellow-banner p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2a4966;
+    margin: 0;
+}
+    .contact-item:first-child {
+        transform: none;
+    }
+
+    .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item:first-child {
+    transform: translateX(-70px);
+}
+
+/* Mobile override */
+@media (max-width: 968px) {
+    .contact-info {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .contact-item:first-child {
+        transform: none;
+    }
+}
+
+/* Call Page Specific Styles */
+.call-hero {
+    height: 300px;
+}
+
+.call-intro-section {
+    background-color: #f4c542;
+    padding: 80px 0;
+}
+
+.call-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.call-video img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.call-description h2 {
+    font-size: 36px;
+    color: #5b9bd5;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.call-description h3 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.call-description p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.why-section, .for-who-section {
+    padding: 5px 0;
+    background-color: white;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.expect-section {
+    background-color: #f4c542;
+    padding: 35px 0px;
+}
+
+.expect-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.expect-text h2 {
+    font-size: 36px;
+    color: #5b9bd5;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.expect-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.expect-video img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.booking-section, .final-booking-cta {
+    padding: 5px 0;
+    background-color: white;
+}
+
+.highlight-text {
+    color: #5b9bd5;
+    font-weight: 600;
+}
+
+.testimonials-preview {
+    background-color: #f8f8f8;
+    padding: 5px 0;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.testimonial-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.testimonial-name {
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.testimonial-source {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.btn-more {
+    display: inline-block;
+    background-color: #5b9bd5;
+    color: white;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.btn-more:hover {
+    background-color: #4a8bc2;
+}
+
+.instagram-section {
+    background-color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Mobile Responsive for Call Page */
+@media (max-width: 968px) {
+    .call-content-grid, .expect-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .call-hero {
+        height: 200px;
+    }
+    
+    .call-hero h1 {
+        font-size: 32px;
+    }
+}
+
+
+.why-section, .for-who-section {
+    background-color: #f8f8f8; 
+}
+
+.for-who-section {
+    background-color: white;
+}
+
+.booking-section, .final-booking-cta {
+    padding: 5px 0;
+    background-color: #f8f8f8; 
+}
+
+.final-booking-cta {
+    background-color: #f8f8f8; 
+}
+
+.instagram-section {
+    background-color: #f8f8f8;
+}
+
+.for-who-section .centered-text strong {
+    font-size: 24px;
+}
+
+/* Percorsi Page Styles */
+.percorsi-hero {
+    height: 300px;
+}
+
+.percorsi-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.percorsi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.percorso-card {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.percorso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.percorso-icon {
+    margin-bottom: 30px;
+}
+
+.percorso-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.percorso-card h2 {
+    font-size: 24px;
+    color: #5b9bd5;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.percorso-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    min-height: 80px;
+}
+
+.btn-percorso {
+    background-color: #f4c542;
+    color: #333;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-percorso:hover {
+    background-color: #e0b332;
+}
+
+/* Mobile Responsive for Percorsi */
+@media (max-width: 968px) {
+    .percorsi-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .percorso-subtitle {
+        min-height: auto;
+    }
+}
+
+/* Percorso card link wrapper */
+.percorso-card-link {
+    text-decoration: none;
+    display: block;
+}
+
+.percorso-card {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.percorso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.percorso-icon {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.percorso-icon img {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Academy Page Styles */
+.academy-description-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.academy-main-title {
+    font-size: 42px;
+    color: #5b9bd5;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.academy-intro,
+.academy-details,
+.academy-includes,
+.academy-cta {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+}
+
+.academy-intro p,
+.academy-details p,
+.academy-includes p,
+.academy-cta p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.highlight-text {
+    color: #5b9bd5;
+    font-weight: 600;
+}
+
+.academy-includes ul {
+    list-style: disc;
+    padding-left: 30px;
+    margin: 20px 0;
+}
+
+.academy-includes li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.important-note {
+    color: #d9534f;
+    font-weight: 600;
+}
+
+.academy-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta-contact {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.open-day-link {
+    color: #5b9bd5;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.open-day-link:hover {
+    text-decoration: underline;
+}
+
+.info-link {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .academy-main-title {
+        font-size: 32px;
+    }
+    
+    .academy-intro,
+    .academy-details,
+    .academy-includes,
+    .academy-cta {
+        padding: 0 20px;
+    }
+}
+
+/* Academy Page Styles */
+.academy-description-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.academy-main-title {
+    font-size: 42px;
+    color: #5b9bd5;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.academy-intro,
+.academy-details,
+.academy-includes,
+.academy-cta {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+}
+
+.academy-intro p,
+.academy-details p,
+.academy-includes p,
+.academy-cta p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Blue colored text for specific phrases */
+.academy-intro p:first-child strong:first-child {
+    color: #5b9bd5;
+}
+
+.academy-intro p:nth-child(2) strong {
+    color: #d9534f; /* Red for emphasis */
+}
+
+.academy-intro .highlight-text {
+    color: #5b9bd5;
+}
+
+.academy-details p strong {
+    color: #5b9bd5; /* Red for emphasis in details */
+}
+
+.academy-details .highlight-text {
+    color: #5b9bd5;
+}
+
+.academy-includes ul {
+    list-style: disc;
+    padding-left: 30px;
+    margin: 20px 0;
+}
+
+.academy-includes li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.academy-includes li strong {
+    color: #d9534f; /* Blue for the list items */
+}
+
+.academy-includes > p:last-of-type strong {
+    color: #5b9bd5 ;
+}
+
+.important-note {
+    color: #5b9bd5 !important;
+    font-weight: 600;
+}
+
+.important-note strong {
+    color: #5b9bd5!important;
+}
+
+.academy-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.academy-cta p:first-child {
+    font-size: 20px;
+}
+
+.cta-contact {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.whatsapp-link {
+    color: #5b9bd5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}
+
+.open-day-link {
+    color: #5b9bd5;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.open-day-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .academy-main-title {
+        font-size: 32px;
+    }
+    
+    .academy-intro,
+    .academy-details,
+    .academy-includes,
+    .academy-cta {
+        padding: 0 20px;
+    }
+}
+
+/* KEY Training System Page Styles */
+.key-title-section {
+    padding: 40px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.key-main-title {
+    font-size: 42px;
+    color: #5b9bd5;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.key-subtitle {
+    font-size: 28px;
+    color: #5b9bd5;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.key-yellow-section {
+    padding: 40px 0;
+    background-color: #f4c542;
+    text-align: center;
+}
+
+.key-yellow-section-access {
+    padding: 40px 0;
+    background-color: #f4c542;
+}
+
+.key-white-section,
+.key-white-section-alt,
+.key-white-section-cost {
+    padding: 40px 0;
+    background-color: white;
+}
+
+.key-section-title {
+    font-size: 36px;
+    color: #5b9bd5;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.key-section-title-blue {
+    font-size: 36px;
+    color: #5b9bd5;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.key-description {
+    font-size: 18px;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.key-description strong {
+    font-weight: 700;
+}
+
+.key-content {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.key-content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.key-content strong {
+    font-weight: 700;
+}
+
+.key-check {
+    position: relative;
+    padding-left: 0;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.key-important {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.key-important strong {
+    color: #d9534f;
+}
+
+.key-checklist {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.key-highlight {
+    font-weight: 600;
+    color: #333;
+}
+
+.key-cost-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.key-cost-box p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.key-cost-main {
+    font-size: 20px !important;
+    font-weight: 700;
+    color: #333 !important;
+}
+
+.key-guarantee {
+    color: #5b9bd5 !important;
+    font-weight: 600;
+}
+
+.key-access-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.key-access-box p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.key-access-modes {
+    color: #5b9bd5 !important;
+    font-weight: 700;
+    font-size: 20px !important;
+}
+
+.key-links-title {
+    color: #d9534f !important;
+    font-weight: 700;
+    font-size: 20px !important;
+    margin-top: 30px !important;
+}
+
+.key-link {
+    color: #5b9bd5;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.key-link:hover {
+    color: #4a8bc2;
+}
+
+.key-reviews-section {
+    padding: 40px 0;
+    background-color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .key-main-title {
+        font-size: 32px;
+    }
+    
+    .key-subtitle {
+        font-size: 22px;
+    }
+    
+    .key-section-title,
+    .key-section-title-blue {
+        font-size: 28px;
+    }
+    
+    .key-content,
+    .key-checklist,
+    .key-cost-box,
+    .key-access-box {
+        padding: 0 20px;
+    }
+}
+
+/* Coaching 1:1 Page Styles */
+.coaching-description-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.coaching-main-title {
+    font-size: 42px;
+    color: #5b9bd5;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.coaching-intro,
+.coaching-details,
+.coaching-cta {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+}
+
+.coaching-intro-title {
+    font-size: 20px;
+    color: #2a4966;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.coaching-list {
+    list-style: disc;
+    padding-left: 30px;
+    margin: 30px 0;
+}
+
+.coaching-list li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.coaching-highlight {
+    font-size: 18px;
+    color: #5b9bd5;
+    font-weight: 700;
+    margin: 30px 0;
+    line-height: 1.8;
+}
+
+.coaching-details p {
+    font-size: 18px;
+    color: #2a4966;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.coaching-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.coaching-contact-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.whatsapp-link-green {
+    color: #7cb342;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.whatsapp-link-green:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .coaching-main-title {
+        font-size: 32px;
+    }
+    
+    .coaching-intro,
+    .coaching-details,
+    .coaching-cta {
+        padding: 0 20px;
+    }
+}
