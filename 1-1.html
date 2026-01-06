@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching 1:1 - Nyssa Nai</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="styles/images/logo.png" alt="Nyssa Nai Logo">
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+<ul class="nav-menu">
+    <li><a href="index.html#workshop">WORKSHOP</a></li>
+    <li><a href="call.html">VIDEO-CALL GRATUITA</a></li>
+    <li><a href="percorsi.html">PERCORSI</a></li>
+    <li><a href="info.html">CHI SONO</a></li>
+    <li><a href="testimonials.html">TESTIMONIALS</a></li>
+    <li><a href="contatti.html">CONTATTI</a></li>
+</ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero percorsi-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Coaching 1:1</h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Coaching Description Section -->
+        <section class="coaching-description-section">
+            <div class="container">
+                <h2 class="coaching-main-title">"THE KEY" Coaching 1:1</h2>
+                
+                <div class="coaching-intro">
+                    <p class="coaching-intro-title">E' un programma:</p>
+                    
+                    <ul class="coaching-list">
+                        <li><strong>per chi preferisce avere il supporto di un coach sempre al suo fianco.</strong></li>
+                        <li><strong>per chi non ha tempo e ha bisogno qualcuno che gli faccia seguire un piano di lavoro passo a passo</strong></li>
+                    </ul>
+                    
+                    <p class="coaching-highlight">IL PROGRAMMA E' PERSONALIZZATO E VIENE STILATO DA ME PERSONALMENTE IN BASE ALLE TUE ESIGENZE. (PREPARAZIONE ESAMI DISPONIBILE)</p>
+                </div>
+
+                <div class="coaching-details">
+                    <p><strong>Incontri settimanali, PDF esclusivi dopo ogni lezione</strong></p>
+                    
+                    <p><strong>Accesso a "THE KEY ACADEMY" compreso nel pacchetto coaching</strong></p>
+                </div>
+
+                <div class="coaching-cta">
+                    <p class="coaching-contact-title">Contattami per ulteriori informazioni - <a href="https://wa.me/393534541665" class="whatsapp-link-green">Whatsapp 3534541665</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nyssa Nai - All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

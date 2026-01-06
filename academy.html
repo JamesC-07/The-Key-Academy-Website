@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE KEY Academy - Nyssa Nai</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header (same as other pages) -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="styles/images/logo.png" alt="Nyssa Nai Logo">
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+<ul class="nav-menu">
+    <li><a href="index.html#workshop">WORKSHOP</a></li>
+    <li><a href="call.html">VIDEO-CALL GRATUITA</a></li>
+    <li><a href="percorsi.html">PERCORSI</a></li>
+    <li><a href="info.html">CHI SONO</a></li>
+    <li><a href="testimonials.html">TESTIMONIALS</a></li>
+    <li><a href="contatti.html">CONTATTI</a></li>
+</ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero percorsi-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>L'Academy</h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Academy Description Section -->
+        <section class="academy-description-section">
+            <div class="container">
+                <h2 class="academy-main-title">THE KEY® Academy</h2>
+                
+                <div class="academy-intro">
+                    <p><strong>"THE KEY" ACADEMY</strong> è l'unica Academy in Italia <strong>basata completamente sulle regole dello speaking</strong>.</p>
+                    
+                    <p>È composta da una community di persone italiane ed internazionali che hanno lo scopo comune di <strong>praticare il loro inglese GIORNALMENTE in un ambiente sicuro, confortevole e soprattutto non giudicante!</strong></p>
+                    
+                    <p class="highlight-text"><strong>LE PERSONE ALL'INTERNO DELLA COMMUNITY SONO ALTAMENTE SELEZIONATE da me personalmente!</strong></p>
+                </div>
+
+                <div class="academy-details">
+                    <p>All'interno dell'Academy troverai tutto quello che ti serve per comunicare senza più paura di sbagliare, un'ampia parte su pronuncia e fonetica e tutto il supporto che serve per risolvere il problema con questa lingua <strong>una volta per tutte!</strong></p>
+                    
+                    <p class="highlight-text"><strong>La parte dei meeting live è il fiore all'occhiello dell'Academy, unica nel suo genere.</strong></p>
+                    
+                    <p>Avviene su <strong>zoom</strong> e mia cura è <strong>dividere le persone in base al loro livello di confidenza nell'inglese parlato</strong> es in base a passioni ed interessi! Ci sono anche stanze per persone con <strong>seria difficoltà nel parlare inglese</strong> dove parliamo italiano ad inglese per il tempo necessario a capire questo nuovo approccio.</p>
+                    
+                    <p class="highlight-text"><strong>Tutte le persone all'interno vengono seguite personalmente da me per assicurare un'esperienza piacevole e gratificante.</strong></p>
+                </div>
+
+                <div class="academy-includes">
+                    <p><strong>L'Academy comprende:</strong></p>
+                    <ul>
+                        <li><strong>8 meeting a settimana LIVE su zoom</strong> con diversi orari e attività (a quelli che vuoi, anche tutti!!!)</li>
+                        <li><strong>2 gruppi telegram</strong> (uno con attività più semplici ad uno con attività più articolate) dove svolgiamo <strong>attività giornaliere</strong> su speaking, listening e pronunciation</li>
+                        <li><strong>Materiali scaricabili e lezioni registrate</strong></li>
+                        <li><strong>Contatto diretto con me.</strong></li>
+                        <li><strong>Classi bonus con native speakers (accento britannico e americano)</strong></li>
+                    </ul>
+                    
+                    <p><strong>Tutto questo per 49 euro al mese.</strong></p>
+                    
+                    <p class="important-note"><strong>NON è un abbonamento, ogni mese puoi decidere se rimanere nella community oppure no.</strong></p>
+                </div>
+
+                <div class="academy-cta">
+                    <p><strong>Per entrare in Academy:</strong></p>
+                    <p class="cta-contact">Contattami al numero <a href="https://wa.me/393534541665" class="whatsapp-link">Whatsapp 3534541665</a> oppure manda una mail a nyssa.sbloccailtuoinglese@gmail.com!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nyssa Nai - All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
