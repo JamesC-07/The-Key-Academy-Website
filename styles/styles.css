@@ -607,6 +607,7 @@ header {
     width: 48px;
     height: 48px;
     stroke: #333;
+    display: block;
 }
 .instagram-link:hover {
     transform: scale(1.1);
@@ -1807,3 +1808,4 @@ body {
         padding: 0 20px;
     }
 }
+
