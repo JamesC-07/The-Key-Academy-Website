@@ -679,19 +679,23 @@ header {
     justify-content: center;
     width: 70px;
     height: 70px;
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-color: #333;
     border-radius: 15px;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.instagram-link i {
-    font-size: 38px;
-    color: white;
+.instagram-link svg {
+    width: 40px;
+    height: 40px;
+    stroke: white;
+    fill: none;
+    display: block;
 }
 
 .instagram-link:hover {
     transform: scale(1.1);
+    background-color: #5b9bd5;
 }
 
 
@@ -1455,10 +1459,4 @@ footer p {
     .sub-quote { font-size: 16px; }
     .cta-section h2 { font-size: 32px; }
     .btn-telegram { font-size: 18px; padding: 15px 30px; }
-}
-
-.instagram-link img {
-    width: 40px !important;
-    height: 40px !important;
-    display: block !important;
 }
