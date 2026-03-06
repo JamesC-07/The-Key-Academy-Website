@@ -62,7 +62,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/hero-bg.webp');
+    background-image: url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -661,7 +661,7 @@ footer p {
 
 /* Mobile menu styles */
 @media (max-width: 970px) {
-    .mobile-menu-toggle 
+    .mobile-menu-toggle {
         display: flex;
     }
     
@@ -707,7 +707,7 @@ footer p {
 .mobile-menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -5px);
 }
-
+}
 
 /* Responsive Design */
 @media (max-width: 968px) {
@@ -1809,31 +1809,44 @@ body {
     }
 }
 
+/* Contact Section Socials */
+.social-section {
+    margin-top: 50px;
+}
+
+.instagram-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.instagram-arrow {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
 .instagram-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
+    background-color: #333; /* Dark background to make it stand out */
+    color: #fff;            /* Icon color will be white */
+    border-radius: 15px;
     text-decoration: none;
-    transition: transform 0.3s ease;
-    /* Added background to make it visible */
-    background-color: #f0f0f0; 
-    border-radius: 20px;
-    margin-top: 10px;
+    transition: all 0.3s ease;
 }
 
 .instagram-link svg {
-    width: 48px;
-    height: 48px;
-    stroke: #333; /* Dark grey color */
-    flex-shrink: 0; /* Prevents the SVG from shrinking to 0 */
+    width: 40px;
+    height: 40px;
+    stroke: currentColor; /* Inherits white from the parent's color */
+    fill: none;
+    display: block;
 }
 
 .instagram-link:hover {
     transform: scale(1.1);
-    background-color: #e0e0e0;
+    background-color: #5b9bd5; /* Turns blue on hover */
 }
-
-
-
