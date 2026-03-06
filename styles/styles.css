@@ -661,7 +661,7 @@ footer p {
 
 /* Mobile menu styles */
 @media (max-width: 970px) {
-    .mobile-menu-toggle {
+    .mobile-menu-toggle 
         display: flex;
     }
     
@@ -707,7 +707,7 @@ footer p {
 .mobile-menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -5px);
 }
-}
+
 
 /* Responsive Design */
 @media (max-width: 968px) {
@@ -1834,5 +1834,6 @@ body {
     transform: scale(1.1);
     background-color: #e0e0e0;
 }
+
 
 
