@@ -62,7 +62,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/hero-bg.webp');
+    background-image: url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -804,7 +804,7 @@ footer p {
 }
 
 .contact-item:first-child {
-    transform: translateX(-70px);
+    transform: none;
 }
 
 /* Increase all text sizes */
@@ -949,7 +949,7 @@ body {
 }
 
 .contact-item:first-child {
-    transform: translateX(-70px);
+    transform: none;
 }
 
 /* Mobile override */
@@ -1807,4 +1807,3 @@ body {
         padding: 0 20px;
     }
 }
-
