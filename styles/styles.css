@@ -62,7 +62,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/hero-bg.jpg');
+    background-image: url('images/hero-bg.webp');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -1850,3 +1850,4 @@ body {
     transform: scale(1.1);
     background-color: #5b9bd5; /* Turns blue on hover */
 }
+
