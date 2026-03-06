@@ -1809,4 +1809,30 @@ body {
     }
 }
 
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    /* Added background to make it visible */
+    background-color: #f0f0f0; 
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.instagram-link svg {
+    width: 48px;
+    height: 48px;
+    stroke: #333; /* Dark grey color */
+    flex-shrink: 0; /* Prevents the SVG from shrinking to 0 */
+}
+
+.instagram-link:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
 
