@@ -11,16 +11,21 @@
     <meta name="author" content="Nyssa Nai">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Italian">
-    <link rel="canonical" href="https://sbloccailtuoinglese.it/index.html">
+    <link rel="canonical" href="https://sbloccailtuoinglese.it/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sbloccailtuoinglese.it/index.html">
+    <meta property="og:url" content="https://sbloccailtuoinglese.it/">
     <meta property="og:title" content="Nyssa Nai - English Coach | Sblocca il tuo Inglese®">
     <meta property="og:description" content="Supera il blocco di parlare inglese con il Metodo THE KEY® di Nyssa Nai. Workshop gratuito, coaching 1:1 e percorsi personalizzati per diventare un English speaker fluente.">
     <meta property="og:image" content="https://sbloccailtuoinglese.it/styles/images/hero-bg.jpg">
@@ -31,11 +36,77 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://sbloccailtuoinglese.it/index.html">
+    <meta name="twitter:url" content="https://sbloccailtuoinglese.it/">
     <meta name="twitter:title" content="Nyssa Nai - English Coach | Sblocca il tuo Inglese®">
     <meta name="twitter:description" content="Supera il blocco di parlare inglese con il Metodo THE KEY® di Nyssa Nai. Workshop gratuito, coaching 1:1 e percorsi personalizzati per diventare un English speaker fluente.">
     <meta name="twitter:image" content="https://sbloccailtuoinglese.it/styles/images/hero-bg.jpg">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://sbloccailtuoinglese.it/#organization",
+          "name": "THE KEY Academy – Sblocca il tuo Inglese®",
+          "url": "https://sbloccailtuoinglese.it/",
+          "logo": "https://sbloccailtuoinglese.it/styles/images/logo.png",
+          "description": "L'unica Academy in Italia basata completamente sulle regole dello speaking. Metodo THE KEY® di Nyssa Nai per parlare inglese con sicurezza.",
+          "founder": {
+            "@type": "Person",
+            "name": "Nyssa Nai"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+39-353-454-1665",
+            "contactType": "customer service",
+            "availableLanguage": ["Italian", "English"]
+          },
+          "sameAs": [
+            "https://www.instagram.com/nyssa.sbloccailtuoinglese/",
+            "https://t.me/sbloccailtuoinglese"
+          ]
+        },
+        {
+          "@type": "Event",
+          "@id": "https://sbloccailtuoinglese.it/#workshop-marzo-2026",
+          "name": "Workshop Gratuito – Sblocca il tuo Inglese®",
+          "description": "3 serate di Workshop GRATUITO per imparare come superare il blocco di parlare inglese e diventare un English speaker.",
+          "startDate": "2026-03-23",
+          "endDate": "2026-03-25",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+          "location": {
+            "@type": "VirtualLocation",
+            "url": "https://t.me/sbloccailtuoinglese"
+          },
+          "organizer": {
+            "@id": "https://sbloccailtuoinglese.it/#organization"
+          },
+          "isAccessibleForFree": true,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://t.me/sbloccailtuoinglese"
+          }
+        },
+        {
+          "@type": "AggregateRating",
+          "@id": "https://sbloccailtuoinglese.it/#aggregate-rating",
+          "itemReviewed": {
+            "@id": "https://sbloccailtuoinglese.it/#organization"
+          },
+          "ratingValue": "5",
+          "bestRating": "5",
+          "ratingCount": "3"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -43,7 +114,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="styles/images/logo.png" fetchpriority="high" alt="Nyssa Nai Logo">
+                <img src="styles/images/logo.png" fetchpriority="high" alt="Nyssa Nai – English Coach Logo" width="206" height="200">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -66,7 +137,7 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Nyssa Nai</h1>
+            <h1 class="hero-h1-seo">Nyssa Nai<span class="visually-hidden"> – English Coach | Sblocca il tuo Inglese® con il Metodo THE KEY®</span></h1>
             <h2>English Coach | Crescita personale</h2>
             <div class="hero-text">
                 <h3>Sblocca il tuo inglese®</h3>
@@ -120,7 +191,7 @@
                 <!-- Workshop Info Grid -->
                 <div class="workshop-info-grid">
                     <div class="workshop-photo">
-                        <img src="styles/images/workshop.jpg" alt="Workshop participants" loading="lazy">
+                        <img src="styles/images/workshop.jpg" alt="Workshop gratuito Sblocca il tuo Inglese con Nyssa Nai" loading="lazy" width="561" height="254">
                     </div>
                     <div class="workshop-description">
                         <p class="workshop-intro">Ti piace l'idea di trasformare il tuo inglese in una competenza da poter usare attivamente nella tua vita?</p>
@@ -196,7 +267,7 @@
             <div class="container">
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="styles/images/nyssa-photo.jpg" alt="Nyssa Nai" loading="lazy">
+                        <img src="styles/images/nyssa-photo.jpg" alt="Nyssa Nai English Coach certificata TESOL, fondatrice di THE KEY Academy" loading="lazy" width="1536" height="1541">
                     </div>
                     <div class="about-text">
                         <h2>Chi è Nyssa e perchè può aiutarti?</h2>
@@ -293,9 +364,19 @@
 </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a> |
+                <a href="percorsi.html">Percorsi</a> |
+                <a href="academy.html">THE KEY Academy</a> |
+                <a href="key.html">Training System</a> |
+                <a href="1-1.html">Coaching 1:1</a> |
+                <a href="call.html">Video-Call Gratuita</a> |
+                <a href="info.html">Chi Sono</a> |
+                <a href="testimonials.html">Testimonianze</a> |
+                <a href="contatti.html">Contatti</a>
+            </nav>
             <p>&copy; 2025 Nyssa Nai - All rights reserved</p>
         </div>
     </footer>
