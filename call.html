@@ -12,9 +12,15 @@
     <meta name="language" content="Italian">
     <link rel="canonical" href="https://sbloccailtuoinglese.it/call.html">
 
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -34,6 +40,26 @@
     <meta name="twitter:description" content="Prenota la tua video-call gratuita con Nyssa Nai. Un colloquio personalizzato per scoprire come sbloccare il tuo inglese e scegliere il percorso giusto per te.">
     <meta name="twitter:image" content="https://sbloccailtuoinglese.it/styles/images/call-video.jpg">
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Video-Call Gratuita con Nyssa Nai",
+      "description": "Colloquio conoscitivo gratuito di circa 30 minuti su Zoom per capire il percorso più adatto a te e superare il blocco dell'inglese.",
+      "provider": {
+        "@type": "Person",
+        "name": "Nyssa Nai",
+        "url": "https://sbloccailtuoinglese.it/info.html"
+      },
+      "url": "https://sbloccailtuoinglese.it/call.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -41,7 +67,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <img src="styles/images/logo.png" alt="Nyssa Nai Logo">
+                    <img src="styles/images/logo.png" alt="Nyssa Nai – English Coach Logo" width="206" height="200">
                 </div>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -75,7 +101,7 @@
             <div class="container">
                 <div class="call-content-grid">
                     <div class="call-video">
-                        <img src="styles/images/call-video.jpg" alt="Video call con Nyssa">
+                        <img src="styles/images/call-video.jpg" alt="Video call gratuita con Nyssa Nai English Coach su Zoom" loading="lazy" width="742" height="267">
                     </div>
                     <div class="call-description">
                         <h2>Video-call gratuita con Nyssa</h2>
@@ -113,7 +139,7 @@
                         <p><strong>Durante questa call gratuita di circa 30 minuti</strong>, parleremo delle tue difficoltà con l'inglese e dei tuoi obiettivi.</p>
                     </div>
                     <div class="expect-video">
-                        <img src="styles/images/call-video2.jpg" alt="Cosa aspettarsi dalla call">
+                        <img src="styles/images/call-video2.jpg" alt="Cosa aspettarsi dalla video call gratuita con Nyssa Nai" loading="lazy" width="1533" height="538">
                     </div>
                 </div>
             </div>
@@ -192,9 +218,19 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a> |
+                <a href="percorsi.html">Percorsi</a> |
+                <a href="academy.html">THE KEY Academy</a> |
+                <a href="key.html">Training System</a> |
+                <a href="1-1.html">Coaching 1:1</a> |
+                <a href="call.html">Video-Call Gratuita</a> |
+                <a href="info.html">Chi Sono</a> |
+                <a href="testimonials.html">Testimonianze</a> |
+                <a href="contatti.html">Contatti</a>
+            </nav>
             <p>&copy; 2025 Nyssa Nai - All rights reserved</p>
         </div>
     </footer>
