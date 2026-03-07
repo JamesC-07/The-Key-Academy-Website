@@ -12,9 +12,13 @@
     <meta name="language" content="Italian">
     <link rel="canonical" href="https://sbloccailtuoinglese.it/academy.html">
 
-    <!-- Favicon -->
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -34,6 +38,29 @@
     <meta name="twitter:description" content="THE KEY Academy: l'unica Accademia in Italia basata sulle regole dello speaking. Impara a parlare inglese con sicurezza grazie al Metodo THE KEY® di Nyssa Nai.">
     <meta name="twitter:image" content="https://sbloccailtuoinglese.it/styles/images/academy-icon.png">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "THE KEY Academy",
+      "description": "L'unica Academy in Italia basata completamente sulle regole dello speaking. 8 meeting settimanali live su Zoom, gruppi Telegram con attività giornaliere, materiali scaricabili e classi con native speakers.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "THE KEY Academy – Sblocca il tuo Inglese®",
+        "url": "https://sbloccailtuoinglese.it/"
+      },
+      "url": "https://sbloccailtuoinglese.it/academy.html",
+      "inLanguage": "it",
+      "offers": {
+        "@type": "Offer",
+        "price": "49",
+        "priceCurrency": "EUR",
+        "description": "Abbonamento mensile senza vincoli – 49 euro al mese"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header (same as other pages) -->
@@ -41,7 +68,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <img src="styles/images/logo.png" alt="Nyssa Nai Logo">
+                    <img src="styles/images/logo.png" alt="Nyssa Nai – English Coach Logo" width="206" height="200">
                 </div>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -64,7 +91,7 @@
     <section class="hero percorsi-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>L'Academy</h1>
+            <h1 class="academy-hero-h1">L'Academy<span class="visually-hidden"> – THE KEY Academy, Imparare Inglese con il Metodo THE KEY® di Nyssa Nai</span></h1>
         </div>
     </section>
 
@@ -116,9 +143,19 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a> |
+                <a href="percorsi.html">Percorsi</a> |
+                <a href="academy.html">THE KEY Academy</a> |
+                <a href="key.html">Training System</a> |
+                <a href="1-1.html">Coaching 1:1</a> |
+                <a href="call.html">Video-Call Gratuita</a> |
+                <a href="info.html">Chi Sono</a> |
+                <a href="testimonials.html">Testimonianze</a> |
+                <a href="contatti.html">Contatti</a>
+            </nav>
             <p>&copy; 2025 Nyssa Nai - All rights reserved</p>
         </div>
     </footer>
