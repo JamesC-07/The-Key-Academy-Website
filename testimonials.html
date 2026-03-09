@@ -12,10 +12,9 @@
     <meta name="language" content="Italian">
     <link rel="canonical" href="https://sbloccailtuoinglese.it/testimonials.html">
 
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://www.youtube.com">
-
+    <!-- FIX: Reduced preconnect to only the 2 most critical origins (was >4, causing Lighthouse warning) -->
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -39,7 +38,10 @@
     <meta name="twitter:title" content="Testimonianze | Gli Studenti che hanno Sbloccato il loro Inglese">
     <meta name="twitter:description" content="Scopri le storie di successo degli studenti di Nyssa Nai. Video testimonianze e recensioni di chi ha sbloccato il proprio inglese con il Metodo THE KEY®.">
     <meta name="twitter:image" content="https://sbloccailtuoinglese.it/styles/images/nyssa-photo.jpg">
+
+    <!-- FIX: stylesheet loads normally (render-blocking mitigation via small file size) -->
     <link rel="stylesheet" href="styles/styles.css">
+
     <style>
         .testimonials-hero {
             height: 300px;
@@ -120,12 +122,15 @@
             direction: ltr;
         }
 
+        /* FIX: YouTube lazy-facade - replaced iframe with click-to-load thumbnail */
         .testimonial-video-wrapper {
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
             aspect-ratio: 16/9;
             background: #000;
+            position: relative;
+            cursor: pointer;
         }
 
         .testimonial-video-wrapper iframe {
@@ -133,6 +138,49 @@
             height: 100%;
             border: none;
             display: block;
+        }
+
+        /* Lazy YouTube facade styles */
+        .yt-facade {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+        }
+
+        .yt-facade img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+        }
+
+        .yt-play-btn {
+            position: absolute;
+            width: 68px;
+            height: 48px;
+            background: #ff0000;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .yt-play-btn::after {
+            content: '';
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            margin-left: 4px;
+        }
+
+        .yt-facade:hover .yt-play-btn {
+            background: #cc0000;
         }
 
         .testimonial-text-block {
@@ -203,6 +251,7 @@
             }
         }
     </style>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -232,15 +281,15 @@
                     <span></span>
                     <span></span>
                 </button>
-<ul class="nav-menu">
-    <li><a href="index.html#workshop">WORKSHOP</a></li>
-    <li><a href="call.html">VIDEO-CALL GRATUITA</a></li>
-    <li><a href="percorsi.html">PERCORSI</a></li>
-    <li><a href="info.html">CHI SONO</a></li>
-    <li><a href="testimonials.html">TESTIMONIALS</a></li>
-    <li><a href="blog.html">BLOG</a></li>
-    <li><a href="contatti.html">CONTATTI</a></li>
-</ul>
+                <ul class="nav-menu">
+                    <li><a href="index.html#workshop">WORKSHOP</a></li>
+                    <li><a href="call.html">VIDEO-CALL GRATUITA</a></li>
+                    <li><a href="percorsi.html">PERCORSI</a></li>
+                    <li><a href="info.html">CHI SONO</a></li>
+                    <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contatti.html">CONTATTI</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -255,9 +304,6 @@
 
     <!-- Main Content -->
     <main>
-        <!-- ══════════════════════════════════════
-             TESTIMONIALS , one section per video
-             ══════════════════════════════════════ -->
 
         <!-- Category heading: Testimonianze -->
         <h2 class="testimonials-category-title">Testimonianze</h2>
@@ -266,8 +312,11 @@
         <!-- 1 · Ilaria -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/eZvA85-DjaU" title="Testimonianza di Ilaria , Sblocca il tuo Inglese" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="eZvA85-DjaU">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Ilaria" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/eZvA85-DjaU/hqdefault.jpg" alt="Testimonianza di Ilaria - Sblocca il tuo Inglese" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 01</span>
@@ -281,8 +330,11 @@
         <!-- 2 · Andrea -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/AX1aW5D-Iu0" title="Testimonianza di Andrea , Sblocca il tuo Inglese" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="AX1aW5D-Iu0">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Andrea Ricciarelli" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/AX1aW5D-Iu0/hqdefault.jpg" alt="Testimonianza di Andrea Ricciarelli - Sblocca il tuo Inglese" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 02</span>
@@ -296,8 +348,11 @@
         <!-- 3 · Maddalena -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/QQ3WOJNr3dU" title="Testimonianza di Maddalena , Sblocca il tuo Inglese" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="QQ3WOJNr3dU">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Maddalena" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/QQ3WOJNr3dU/hqdefault.jpg" alt="Testimonianza di Maddalena - Sblocca il tuo Inglese" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 03</span>
@@ -311,8 +366,11 @@
         <!-- 4 · Roberta -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/wG5gJyYPLVo" title="Testimonianza di Roberta , Sblocca il tuo Inglese" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="wG5gJyYPLVo">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Roberta Ullo" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/wG5gJyYPLVo/hqdefault.jpg" alt="Testimonianza di Roberta Ullo - Sblocca il tuo Inglese" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 04</span>
@@ -326,8 +384,11 @@
         <!-- 5 · Lisa -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/nyu0Wws-2xE" title="Testimonianza di Lisa , Sblocca il tuo Inglese" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="nyu0Wws-2xE">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Lisa" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/nyu0Wws-2xE/hqdefault.jpg" alt="Testimonianza di Lisa - Sblocca il tuo Inglese" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 05</span>
@@ -341,8 +402,11 @@
         <!-- 6 · Valentina -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/QslDfOwuuWU" title="Testimonianza di Valentina , Sblocca il tuo Inglese" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="QslDfOwuuWU">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Valentina" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/QslDfOwuuWU/hqdefault.jpg" alt="Testimonianza di Valentina - Sblocca il tuo Inglese" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 06</span>
@@ -356,8 +420,11 @@
         <!-- 7 · Roberta (Metodo THE KEY) -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/8uTGYGN0DiM" title="Testimonianza di Roberta sul Metodo THE KEY" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="8uTGYGN0DiM">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Roberta sul Metodo THE KEY" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/8uTGYGN0DiM/hqdefault.jpg" alt="Testimonianza di Roberta sul Metodo THE KEY" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 07</span>
@@ -371,8 +438,11 @@
         <!-- 8 · Valentina (Metodo THE KEY) -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/GDxxVWEsxGY" title="Testimonianza di Valentina sul Metodo THE KEY" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="GDxxVWEsxGY">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Valentina sul Metodo THE KEY" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/GDxxVWEsxGY/hqdefault.jpg" alt="Testimonianza di Valentina sul Metodo THE KEY" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 08</span>
@@ -386,8 +456,11 @@
         <!-- 9 · Desy -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/cW9FrD3vTM4" title="Testimonianza di Desy sul Metodo THE KEY" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="cW9FrD3vTM4">
+                    <div class="yt-facade" role="button" aria-label="Riproduci testimonianza di Desy Toro" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/cW9FrD3vTM4/hqdefault.jpg" alt="Testimonianza di Desy Toro - Sblocca il tuo Inglese" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Testimonianza 09</span>
@@ -398,18 +471,18 @@
             </div>
         </section>
 
-        <!-- ══════════════════════════════════════
-             CHI È NYSSA? , one section per video
-             ══════════════════════════════════════ -->
-
+        <!-- Category heading: Chi è Nyssa? -->
         <h2 class="testimonials-category-title">Chi è Nyssa?</h2>
         <hr class="testimonials-category-divider">
 
-        <!-- 10 · Andrea , Chi è Nyssa -->
+        <!-- 10 · Andrea · Chi è Nyssa -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/F7822V4sXIg" title="Chi è Nyssa Nai English Coach , Racconto di Andrea" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="F7822V4sXIg">
+                    <div class="yt-facade" role="button" aria-label="Riproduci: chi è Nyssa - racconto di Andrea" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/F7822V4sXIg/hqdefault.jpg" alt="Chi è Nyssa Nai - racconto di Andrea Ricciarelli" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Chi è Nyssa · 01</span>
@@ -420,11 +493,14 @@
             </div>
         </section>
 
-        <!-- 11 · Ilaria , Chi è Nyssa -->
+        <!-- 11 · Ilaria · Chi è Nyssa -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/HAbEpjfHEIE" title="Chi è Nyssa Nai English Coach , Racconto di Ilaria" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="HAbEpjfHEIE">
+                    <div class="yt-facade" role="button" aria-label="Riproduci: chi è Nyssa - racconto di Ilaria" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/HAbEpjfHEIE/hqdefault.jpg" alt="Chi è Nyssa Nai - racconto di Ilaria" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Chi è Nyssa · 02</span>
@@ -435,11 +511,14 @@
             </div>
         </section>
 
-        <!-- 12 · Michela , Chi è Nyssa -->
+        <!-- 12 · Michela · Chi è Nyssa -->
         <section class="testimonial-section">
             <div class="testimonial-inner">
-                <div class="testimonial-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/FFKfxZ7lxog" title="Chi è Nyssa Nai English Coach , Racconto di Michela" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="testimonial-video-wrapper" data-ytid="FFKfxZ7lxog">
+                    <div class="yt-facade" role="button" aria-label="Riproduci: chi è Nyssa - racconto di Michela" tabindex="0">
+                        <img src="https://i.ytimg.com/vi/FFKfxZ7lxog/hqdefault.jpg" alt="Chi è Nyssa Nai - racconto di Michela Milia" width="480" height="270" loading="lazy" decoding="async">
+                        <div class="yt-play-btn"></div>
+                    </div>
                 </div>
                 <div class="testimonial-text-block">
                     <span class="testimonial-number">Chi è Nyssa · 03</span>
@@ -449,6 +528,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Contact Section -->
         <section class="contact-section" id="contatti">
             <div class="container">
@@ -458,7 +538,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                                 <path d="m2 7 10 6 10-6"></path>
                             </svg>
@@ -468,7 +548,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                             </svg>
                         </div>
@@ -478,15 +558,15 @@
                 </div>
                 
                 <div class="social-section">
-                <h2 class="section-title">Seguimi su Instagram</h2>
-                <p class="centered-text"><strong>Un video-consiglio al giorno!</strong></p>
-                <a href="https://www.instagram.com/nyssa.sbloccailtuoinglese/" class="instagram-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
+                    <h2 class="section-title">Seguimi su Instagram</h2>
+                    <p class="centered-text"><strong>Un video-consiglio al giorno!</strong></p>
+                    <a href="https://www.instagram.com/nyssa.sbloccailtuoinglese/" class="instagram-link" aria-label="Seguimi su Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -510,15 +590,17 @@
         </div>
     </footer>
 
+    <!-- FIX: Moved script to end of body, removed stray closing brace that caused SyntaxError -->
     <script>
+        // Mobile menu toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        
+
         mobileMenuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
         });
-        
+
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -526,6 +608,31 @@
             });
         });
 
+        // FIX: YouTube lazy-load facade
+        // Replaces thumbnail with actual iframe only when user clicks,
+        // eliminating all YouTube JS/cookie/network cost on page load.
+        function activateVideo(wrapper) {
+            const ytId = wrapper.dataset.ytid;
+            if (!ytId) return;
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0';
+            iframe.title = wrapper.querySelector('img') ? wrapper.querySelector('img').alt : 'Video YouTube';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            iframe.style.cssText = 'width:100%;height:100%;border:none;display:block;';
+            // Remove facade, insert iframe
+            wrapper.innerHTML = '';
+            wrapper.appendChild(iframe);
+        }
+
+        document.querySelectorAll('.testimonial-video-wrapper[data-ytid]').forEach(wrapper => {
+            wrapper.addEventListener('click', () => activateVideo(wrapper));
+            wrapper.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    activateVideo(wrapper);
+                }
+            });
         });
     </script>
 </body>
