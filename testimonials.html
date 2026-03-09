@@ -122,30 +122,35 @@
             direction: ltr;
         }
 
-        /* FIX: YouTube lazy-facade - replaced iframe with click-to-load thumbnail */
+        /* YouTube lazy-facade */
         .testimonial-video-wrapper {
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-            aspect-ratio: 16/9;
             background: #000;
             position: relative;
+            /* Padding-bottom trick guarantees 16:9 height even with absolute children */
+            width: 100%;
+            padding-bottom: 56.25%; /* 9/16 = 56.25% */
+            height: 0;
             cursor: pointer;
         }
 
-        .testimonial-video-wrapper iframe {
+        .testimonial-video-wrapper iframe,
+        .yt-facade {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
+        }
+
+        .testimonial-video-wrapper iframe {
             border: none;
             display: block;
         }
 
         /* Lazy YouTube facade styles */
         .yt-facade {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -544,7 +549,7 @@
                             </svg>
                         </div>
                         <p class="contact-label">Email</p>
-                        <p class="contact-detail">nyssa.sbloccailtuoinglese@gmail.com</p>
+                        <p class="contact-detail"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e7899e949486c994858b888484868e8b9392888e89808b829482a7808a868e8bc984888a">[email&#160;protected]</a></p>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -591,7 +596,7 @@
     </footer>
 
     <!-- FIX: Moved script to end of body, removed stray closing brace that caused SyntaxError -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Mobile menu toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
