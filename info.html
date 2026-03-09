@@ -14,8 +14,6 @@
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://www.youtube.com">
-
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -40,6 +38,55 @@
     <meta name="twitter:description" content="Nyssa Nai è English Coach certificata TESOL, fondatrice di THE KEY Academy e ideatrice di Sblocca il tuo Inglese®. Scopri la sua storia e il suo metodo innovativo.">
     <meta name="twitter:image" content="https://sbloccailtuoinglese.it/styles/images/nyssa-photo.jpg">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <style>
+        .badges-section {
+            margin-top: 36px;
+            padding-top: 28px;
+            border-top: 1px solid #e0e8f4;
+        }
+
+        .badges-title {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #5b9bd5;
+            margin-bottom: 20px;
+        }
+
+        .badges-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .badge-link {
+            display: inline-block;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .badge-link:hover {
+            transform: translateY(-3px);
+            opacity: 0.85;
+        }
+
+        .badge-link img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .badge-link img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -52,7 +99,8 @@
       "image": "https://sbloccailtuoinglese.it/styles/images/nyssa-photo.jpg",
       "sameAs": [
         "https://www.instagram.com/nyssa.sbloccailtuoinglese/",
-        "https://t.me/sbloccailtuoinglese"
+        "https://t.me/sbloccailtuoinglese",
+        "https://www.credly.com/users/nyssa-nai"
       ],
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
@@ -117,6 +165,22 @@
                         <p>Ha fondato "THE KEY ACADEMY" che, con il suo Metodo THE KEY®, è l'unica Accademia in Italia basata interamente sulle regole dello speaking.</p>
                         <p>Lavora come English Coach per l'Academy internazionale "Canguro English Academy" al fianco di Christian Saunders con il suo progetto internazionale "Unlock your English" e ha aiuto il piacere di intervistare esperti di calibro di Pat Nation, linguista internazionale, il mentore da cui deriva tutta la sua filosofia di insegnamento.</p>
                         <p>È certificata TESOL con un master di specializzazione in pronuncia e fonetica.</p>
+
+                        <!-- Credly Badges -->
+                        <div class="badges-section">
+                            <p class="badges-title">Credenziali verificate</p>
+                            <div class="badges-list">
+                                <a href="https://www.credly.com/users/nyssa-nai" class="badge-link" target="_blank" rel="noopener noreferrer" aria-label="Visualizza credenziale 1 su Credly">
+                                    <img src="badge1.png" alt="Badge certificazione 1 - Nyssa Nai" loading="lazy" width="100" height="100">
+                                </a>
+                                <a href="https://www.credly.com/users/nyssa-nai" class="badge-link" target="_blank" rel="noopener noreferrer" aria-label="Visualizza credenziale 2 su Credly">
+                                    <img src="badge2.png" alt="Badge certificazione 2 - Nyssa Nai" loading="lazy" width="100" height="100">
+                                </a>
+                                <a href="https://www.credly.com/users/nyssa-nai" class="badge-link" target="_blank" rel="noopener noreferrer" aria-label="Visualizza credenziale 3 su Credly">
+                                    <img src="badge3.png" alt="Badge certificazione 3 - Nyssa Nai" loading="lazy" width="100" height="100">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -131,7 +195,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                                 <path d="m2 7 10 6 10-6"></path>
                             </svg>
@@ -141,7 +205,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                             </svg>
                         </div>
@@ -151,15 +215,15 @@
                 </div>
                 
                 <div class="social-section">
-                <h2 class="section-title">Seguimi su Instagram</h2>
-                <p class="centered-text"><strong>Un video-consiglio al giorno!</strong></p>
-                <a href="https://www.instagram.com/nyssa.sbloccailtuoinglese/" class="instagram-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
+                    <h2 class="section-title">Seguimi su Instagram</h2>
+                    <p class="centered-text"><strong>Un video-consiglio al giorno!</strong></p>
+                    <a href="https://www.instagram.com/nyssa.sbloccailtuoinglese/" class="instagram-link" aria-label="Seguimi su Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -186,12 +250,12 @@
     <script>
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        
+
         mobileMenuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
         });
-        
+
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
