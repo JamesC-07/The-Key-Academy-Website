@@ -36,6 +36,16 @@ header {
     padding: 15px 0;
 }
 
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
 .contact-item {
     text-align: center;
     min-width: 280px;        /* larghezza minima uguale per entrambi */
@@ -52,18 +62,6 @@ header {
     flex-wrap: wrap;
     max-width: 320px;        /* evita che l'email si allarghi troppo */
 }
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-}
-
 .nav-menu {
     display: flex;
     list-style: none;
@@ -646,10 +644,6 @@ header {
 
 .contact-item {
     text-align: center;
-    min-width: 280px;        
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .contact-icon {
@@ -685,7 +679,6 @@ header {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    max-width: 320px;        
 }
 
 a.contact-link {
@@ -1587,5 +1580,3 @@ footer p {
     .hero-h1-seo { font-size: 32px; }
     .academy-hero-h1 { font-size: 32px; }
 }
-
-
