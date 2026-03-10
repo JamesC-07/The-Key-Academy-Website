@@ -1580,3 +1580,6 @@ footer p {
     .hero-h1-seo { font-size: 32px; }
     .academy-hero-h1 { font-size: 32px; }
 }
+.contact-item:first-child {
+    transform: translateX(-40px);
+}
