@@ -1581,5 +1581,6 @@ footer p {
     .academy-hero-h1 { font-size: 32px; }
 }
 .contact-item:first-child {
-    transform: translateX(-40px);
+    transform: translateX(-20px);
 }
+
